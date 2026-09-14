@@ -1,0 +1,4 @@
+'use client';
+import {useState} from 'react';
+import {Menu, X, ArrowUpRight} from 'lucide-react';
+export function Navigation() {const [open,setOpen]=useState(false);return <header className="site-header"><a className="wordmark" href="#">Tsunexa</a><nav aria-label="Main navigation" className={open?'navigation is-open':'navigation'}>{[['Platform','platform'],['Solutions','solutions'],['Our approach','approach'],['Plans','plans']].map(([label,id])=><a href={'#'+id} key={id} onClick={()=>setOpen(false)}>{label}</a>)}</nav><div className="nav-actions"><a href="#platform" className="button nav-explore">Explore platform <ArrowUpRight size={16}/></a><button className="menu-toggle" onClick={()=>setOpen(!open)} aria-label={open?'Close menu':'Open menu'} aria-expanded={open}>{open?<X/>:<Menu/>}</button></div></header>}

@@ -1,0 +1,13 @@
+---
+description: Use pnpm as the only package manager
+alwaysApply: true
+---
+
+# Package manager
+
+This project uses **pnpm**, not npm or Yarn.
+
+- Install: `pnpm install` (or `pnpm install --frozen-lockfile` for CI/reproducible installs)
+- Scripts: `pnpm dev`, `pnpm lint`, `pnpm build`, `pnpm start`
+- Add deps: `pnpm add <pkg>` / `pnpm add -D <pkg>`
+- Commit `pnpm-lock.yaml`. Do not create or commit `package-lock.json` or `yarn.lock`.
